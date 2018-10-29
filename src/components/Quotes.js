@@ -6,8 +6,8 @@ class Quotes extends Component {
     return (
       <div className="App">
         <div className="wrapper">
-          <TransitionGroup>
-            <CSSTransition>
+          <TransitionGroup component={null}>
+            <CSSTransition classNames="fade">
               <div className="bubble">
                 <h3 className="quote">
                   Your quotes will appear here and that will help to others to
