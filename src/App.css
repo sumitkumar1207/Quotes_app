@@ -1,32 +1,88 @@
 .App {
-  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  background: url("./yellow-bg.png");
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrapper {
+  margin: 0 auto;
+  max-width: 540px;
+  padding: 10px;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.bubble {
+  padding: 40px 60px;
+  margin: 170px 10px 0 0;
+  border-radius: 10px;
+  position: absolute;
+  background: url("./background.png");
+  z-index: 1;
+}
+
+.quote,
+h3 {
   color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
 }
 
-.App-link {
-  color: #61dafb;
+h3 {
+  font-size: 1.4rem;
+  font-weight: 100;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.quote::before {
+  height: 70px;
+  width: 130px;
+  background: url("./background.png");
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 22px;
+  transform: rotate(-30deg) skew(-50deg);
+  z-index: -1;
+}
+
+button {
+  background: url("./button.png");
+  background-size: 100px;
+  width: 100px;
+  height: 92px;
+  border: none;
+  cursor: pointer;
+  outline: 0;
+  padding: 0;
+}
+
+/* Fade will appear */
+.fade-appear {
+  opacity: 0;
+}
+.fade-appear.fade-appear-active {
+  opacity: 1;
+  transition: all 300ms linear;
+}
+
+/* Fade Exit */
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: all 400ms linear;
+}
+.fade-exit-done {
+  opacity: 0;
+}
+/* Fade Enter */
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: all 500ms linear 500ms;
 }

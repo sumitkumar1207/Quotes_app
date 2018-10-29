@@ -9,10 +9,10 @@ class Quotes extends Component {
           <TransitionGroup>
             <CSSTransition>
               <div className="bubble">
-                <h1 className="quote">
+                <h3 className="quote">
                   Your quotes will appear here and that will help to others to
                   get the quotes
-                </h1>
+                </h3>
               </div>
             </CSSTransition>
           </TransitionGroup>
